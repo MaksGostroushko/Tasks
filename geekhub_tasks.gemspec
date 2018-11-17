@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name        = 'geekhub_tasks'
-  s.version     = '1.1.0'
+  s.version     = '1.2.0'
   s.date        = '2018-11-15'
   s.summary     = "Hola!"
-  s.description = "A simple hello world gem"
+  s.description = "Special gem for GeekHub"
   s.authors     = ["Maks Gostroushko"]
   s.email       = 'makshostroyshko@gmail.com'
   s.files       = ["lib/geekhub_tasks.rb"]

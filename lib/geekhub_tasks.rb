@@ -1,6 +1,6 @@
 class GeekHubTasks
 
-    def self.triangle(a, b)
+    def self.area_triangle(a, b)
       hypotenuse = Math.sqrt( ( a**2 ) + ( b**2 ) ).round(2)
       area = ( a * b )/2
       { hypotenuse: hypotenuse, area: area }
