@@ -1,6 +1,6 @@
 class GeekHubTasks
 
-    def self.area_triangle(a, b)
+    def self.area__hyptenuse_triangle(a, b)
       hypotenuse = Math.sqrt( ( a**2 ) + ( b**2 ) ).round(2)
       area = ( a * b )/2
       { hypotenuse: hypotenuse, area: area }
@@ -47,7 +47,7 @@ class GeekHubTasks
       { s: s }
     end
 
-    def self.mix(v_1, t_1, v_2, t_2)
+    def self.volume(v_1, t_1, v_2, t_2)
       z = v_1 + v_2
       t = ( ( v_1 * t_1 ) + ( v_2 * t_2 ) )/z.to_i
       { v: z,
@@ -125,7 +125,7 @@ class GeekHubTasks
         {s: s}
     end
 
-    def self.sixty_seven(n)
+    def self.first_last_digit(n)
       x = n.to_s.length # number of digits in number
       z = n.to_s.chars.map { |sum,n| sum = sum.to_i + n.to_i}  # display sum
       x = n.to_s.split('')
@@ -136,7 +136,7 @@ class GeekHubTasks
       { :f => f, :s => s, :t => t}
     end
 
-    def self.sixty_eight_a(n)
+    def self.palindrope(n)
       if n.to_s.reverse == n.to_s
         p = "This number is palindrome"
       else
@@ -178,7 +178,7 @@ class GeekHubTasks
       { f: x }
     end
 
-    def self.chs(k, l)
+    def self.equal_number(k, l)
       if k != l
         sol =  "k != l"
         #k = ( k + l) && l = ( k + l )
@@ -200,7 +200,7 @@ class GeekHubTasks
       { :z => z }
     end
 
-    def self.math1(x, y)
+    def self.simple_operation(x, y)
       sum  = x + y
       diff = x - y
       comp = x * y
@@ -245,7 +245,7 @@ class GeekHubTasks
           sol2: y }
     end
 
-    def self.dano(a, b)
+    def self.ariphmetic(a, b)
       c = ( Math.sqrt( ( b**2 ) - ( a ** 2 ) ) ).round(0)
       r = ( ( a + c - b)/2 ).round(0)
       { c: c,
@@ -383,7 +383,7 @@ class GeekHubTasks
       { result: result }
     end
 
-    def self.test(n)
+    def self.include_number(n)
       if n.to_s.include?("3")
         p = "Yes,include"
       else
@@ -437,7 +437,7 @@ class GeekHubTasks
       { rez1: s1, rez2: t2 }
     end
 
-    def self.defs(a, b)
+    def self.divisor(a, b)
         x = a.to_i.gcdlcm b.to_i
       if a.to_i == 0 || b.to_i == 0
         p = "Danger!You try division on 0"

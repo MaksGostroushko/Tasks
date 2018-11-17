@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'geekhub_tasks'
-  s.version     = '1.2.0'
+  s.version     = '1.3.0'
   s.date        = '2018-11-15'
   s.summary     = "Hola!"
   s.description = "Special gem for GeekHub"
