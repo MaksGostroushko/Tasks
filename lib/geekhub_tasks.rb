@@ -27,11 +27,11 @@ class GeekHubTasks
       { s: s }
     end
 
-    def self.sides_triangle(a_1, b_1, r)
-      c_1 = ( 180 - ( a_1 + b_1 ) )
-      a = 2 * r * Math.sin(a_1 * ( Math::PI/180 ) ).round(2)
-      b = 2 * r * Math.sin(b_1 * ( Math::PI/180 ) ).round(2)
-      c = 2 * r * Math.sin(c_1.to_i * ( Math::PI/180 ) ).round(2)
+    def self.sides_triangle(a1, b1, r)
+      c1 = ( 180 - ( a1 + b1 ) )
+      a = 2 * r * Math.sin(a1 * ( Math::PI/180 ) ).round(2)
+      b = 2 * r * Math.sin(b1 * ( Math::PI/180 ) ).round(2)
+      c = 2 * r * Math.sin(c1.to_i * ( Math::PI/180 ) ).round(2)
       { a: a, b: b, c:c }
     end
 
@@ -40,16 +40,16 @@ class GeekHubTasks
       { s: s }
     end
 
-    def self.distance_between_two_points(x_1, x_2, y_1, y_2)
-      point_1 = (x_2 - x_1)
-      point_2 = (y_2 - y_1)
-      s = Math.sqrt(point_1.to_i**2 + point_2.to_i**2).round(2)
+    def self.distance_between_two_points(x1, x2, y1, y2)
+      point1 = (x2 - x1)
+      point2 = (y2 - y1)
+      s = Math.sqrt(point1.to_i**2 + point2.to_i**2).round(2)
       { s: s }
     end
 
-    def self.volume(v_1, t_1, v_2, t_2)
-      z = v_1 + v_2
-      t = ( ( v_1 * t_1 ) + ( v_2 * t_2 ) )/z.to_i
+    def self.volume(v1, t1, v2, t2)
+      z = v1 + v2
+      t = ( ( v1 * t1 ) + ( v2 * t2 ) )/z.to_i
       { v: z,
       t: t }
     end
@@ -282,7 +282,7 @@ class GeekHubTasks
         { x1: x1, x2: x2 }
     end
 
-    def self.gsub(n)
+    def self.redacted_text(n)
         n.downcase!
       if n.to_s.gsub!(/!/, ".")
         s = "Your redacted string is #{n}"
@@ -378,7 +378,7 @@ class GeekHubTasks
         { r: r }
     end
 
-    def self.new(v1, v2, a1, a2, s)
+    def self.hypot(v1, v2, a1, a2, s)
       result = ( (-(v1+v2)+Math.sqrt( ( (v1+v2) ** 2 )+ 2 * ( a1 + a2 ) * s ) )/( a1 + a2 ) ).round(0)
       { result: result }
     end
@@ -392,7 +392,7 @@ class GeekHubTasks
       { :p => p}
     end
 
-    def self.children(n)
+    def self.child_children(n)
         z = n.gsub!(/child/, "children")
         { :p => "#{z}" }
     end
