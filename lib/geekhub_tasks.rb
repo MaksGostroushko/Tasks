@@ -1,12 +1,12 @@
 class GeekHubTasks
 
-    def self.hyptenuse_triangle(a, b)
+    def self.hypotenuse_triangle(a, b)
       hypotenuse = Math.sqrt( ( a**2 ) + ( b**2 ) ).round(2)
       area = ( a * b )/2
       { hypotenuse: hypotenuse, area: area }
     end
 
-    def self.average(a, b)
+    def self.average_value(a, b)
       average_ariphmetic = ( a + b )/2
       average_geometric = Math.sqrt( a * b ).round(1)
       { average_ariphmetic: average_ariphmetic, average_geometric: average_geometric }
@@ -155,12 +155,12 @@ class GeekHubTasks
       { :p => p }
     end
 
-    def self.age(n)
-      if n % 10 == 1 && n != 11
+    def self.age(age)
+      if age % 10 == 1 && age != 11
         p = " Год "
-      elsif n >= 5 && n <= 20
+      elsif age >= 5 && age <= 20
         p = " Лет "
-      elsif n % 10 <= 4 && n % 10 > 0
+      elsif age % 10 <= 4 && age % 10 > 0
         p = " Годa "
       else
         p = " Лет "
@@ -212,7 +212,7 @@ class GeekHubTasks
       { sol: x }
     end
 
-    def self.fou_one(a, b, c)
+    def self.belong_to_gap(a, b, c)
       if a >= 1 && a <= 3
         a = "belong to the gap"
       else
@@ -293,10 +293,10 @@ class GeekHubTasks
         { :s => s }
     end
 
-    def self.string(n)
-      puts "Your string before readected: " + "#{n}"
-      n.delete! "*"
-      str1 = "Your string after readected: #{n}"
+    def self.string_redacted(string)
+      puts "Your string before readected: " + "#{string}"
+      string.delete! "*"
+      str1 = "Your string after readected: #{string}"
       { :str1 => str1 }
     end
 
